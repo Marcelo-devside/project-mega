@@ -85,13 +85,25 @@ input.addEventListener("focusout", (e) => {
   input.classList.remove("inputNumber-erro");
   span.classList.replace("span-inputNumber", "spanlater");
 });
+const cleanMarcker = () => {
+  for (let i = 0; i < 60; i++) {
+    options.children[i].classList.replace("preenchido", "preencher");
+  }
+};
+function errorInputNamber(){
+  span.classList.replace("span-inputNumber", "spanlater");
+      input.classList.add("inputNumber-erro");
+      butao2.style.display = "none";
+      alignExit.style.display = "none";
+      removeDisabled();
+      cleanMarcker();
+      addDisplayNone();
+      setTimeout(() => {
+        popuprapper.style.display = "initial";
+      }, 800);
+}
 
 function clickInputRepresentation() {
-  const cleanMarcker = () => {
-    for (let i = 0; i < 60; i++) {
-      options.children[i].classList.replace("preenchido", "preencher");
-    }
-  };
   cleanMarcker();
   const numberRepresentation = input.value.replace(/-/g, "");
   let arrayRepresetation = [...numberRepresentation];
@@ -107,16 +119,7 @@ function clickInputRepresentation() {
   result.map((num) => {
     valor = `${num}`;
     if (valor > "60") {
-      span.classList.replace("span-inputNumber", "spanlater");
-      input.classList.add("inputNumber-erro");
-      butao2.style.display = "none";
-      alignExit.style.display = "none";
-      removeDisabled();
-      cleanMarcker();
-      addDisplayNone();
-      setTimeout(() => {
-        popuprapper.style.display = "initial";
-      }, 800);
+      errorInputNamber()
     } else {
       alignExit.style.display = "initial";
       removeDisplayNone();
