@@ -14,7 +14,6 @@
 
 body, html {
   background-color: #2A996E;
-  
   /* background-image:  url('https://especiais.gazetadopovo.com.br/loterias/wp-content/themes/loterias/img/opengraph-mega-sena.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,7 +84,7 @@ h2.title {
 .span-inputNumber {
   position: absolute;
   top: 20px;
-  left: 22px;
+  left: -14px;
   font-size: 12px;
   transition: top 20ms linear, font-size 20ms ease-in;
   z-index: 50;
@@ -100,7 +99,7 @@ h2.title {
 #exitNumbers {
   text-align: center;
   font-size: clamp(1.8em, 1.2vw + 1rem, 3.6rem);
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   line-height: 45px;
   animation: exitEffect 1s;
   color: #063423;
@@ -118,7 +117,7 @@ h2.title {
 }
 
 .spanlater {
-  left: 15px;
+  left: -23px;
   top: 0px;
   color: #08422d;
   ;
@@ -299,7 +298,7 @@ h2.title {
 }
 
 .button-sorteados,
-.button-variantes {
+.button-bolao {
   width: 350px;
   height: 65px;
   font-size: 0.9em;
@@ -314,20 +313,20 @@ h2.title {
 }
 
 .button-sorteados:hover,
-.button-variantes:hover {
+.button-bolao:hover {
   border: 3px solid black;
   transition-duration: 0.1s;
 }
 
 .button-sorteados:active,
-.button-variantes:active {
+.button-bolao:active {
   border: 4px solid black;
   font-size: 0.87em;
   transition-duration: 0.3s;
 }
 
 .button-sorteados:disabled,
-.button-variantes:disabled {
+.button-bolao:disabled {
   color: #178f63;
   border: 2px solid #178f63;
   background-color: rgba(255, 255, 255, 0);
@@ -360,11 +359,11 @@ h2.title {
 
 .popup {
   font-family: Arial, Helvetica, sans-serif;
-  width: clamp(20em, 40.2vw + 5.8rem, 50.9rem);
-  height: clamp(9em, 40.2vw + 9rem, 15.9rem);
+  width: clamp(20em, 40.2vw + 5.8rem, 36.9rem);
+  height: clamp(9em, 16.2vw + 9rem, 15.9rem);
   max-width: 716px;
   max-height: 500px;
-  margin: 210px auto;
+  margin: 140px auto;
   padding: 10px;
   background-color: rgb(255, 255, 255);
   position: relative;
@@ -395,8 +394,8 @@ h2.title {
 
 .popup-title {
   text-align: center;
-  margin-top: clamp(0.025em, 0.50vw + 2.9rem, 3.9rem);
-  font-size: clamp(0.3em, 0.2vw + 1.2rem, 2.9rem);
+  margin-top: clamp(0.025em, 0.1vw + 2.9rem, 3.9rem);
+  font-size: clamp(0.1em, 0.2vw + 1.2rem, 1.9rem);
   color: black;
   animation: fadinUpTitle 3s;
 }
@@ -414,7 +413,7 @@ h2.title {
 
 .popup-paragraf {
   margin-top: clamp(0.4em, 0.2vw + 1.3rem, 15.9rem);
-  font-size: clamp(0.3em, 2.2vw + 0.5rem, 1.2rem);
+  font-size: clamp(0.8em, 0.8vw + 0.5rem, 1.2rem);
   letter-spacing: 1px;
   line-height: clamp(1.6em, 2.2vw + 0.5rem, 2.5rem);
   font-weight: 800;
@@ -431,4 +430,25 @@ h2.title {
   to {
     color: black;
   }
+}
+.alignBolao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.bolaoH2{
+  margin: 30px 175px auto 20px;
+  color: #063423;
+}
+.bolaoH1{
+  margin: 10px auto 10px auto;
+  padding: 10px 15px;
+  font-size: clamp(1.8em, 1.2vw + 1rem, 3.6rem);
+  border-radius: 20px;
+  letter-spacing: 2px;
+  color: #083827;
+  background-color: #167e57;
+
 }

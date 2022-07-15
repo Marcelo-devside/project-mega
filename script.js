@@ -1,9 +1,10 @@
+const body = document.querySelector("body")
 const span = document.querySelector(".span-inputNumber");
 const input = document.querySelector(".inputNumber");
 const alignExit = document.querySelector(".alignExit");
 const showNumber = document.querySelector("#exitNumbers");
 const butao = document.querySelector(".button-sorteados");
-const butao2 = document.querySelector(".button-variantes");
+const butao2 = document.querySelector(".button-bolao");
 const options = document.querySelector(".makerbloc");
 const closePopup = document.querySelector(".popup-close");
 const popuprapper = document.querySelector(".popuprapper");
@@ -21,6 +22,7 @@ const removeDisabled2 = () => butao2.removeAttribute("disabled");
 const addDisabled2 = () => butao2.setAttribute("disabled", "disabled");
 closePopup.addEventListener("click", () => {
   popuprapper.style.display = "none";
+  body.style.overflow="visible"
 });
 window.addEventListener("load", () => {
   alignExit.style.display = "none";
@@ -89,6 +91,7 @@ const cleanMarcker = () => {
 function errorInputNamber() {
   butao2.style.display = "none";
   alignExit.style.display = "none";
+  body.style.overflow="hidden"
   removeDisabled();
   cleanMarcker();
   addDisplayNone();
@@ -159,6 +162,6 @@ function clickInputRepresentation() {
   valueImpares.innerText = changeComaimpar;
   qtdImpares.innerText = showNumberImpares.length;
 }
-function clickInputVariants() {
+function clickInputBolao() {
   // console.log("teste clickInputVariants()");
 }
