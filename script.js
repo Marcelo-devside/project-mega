@@ -45,7 +45,6 @@ input.addEventListener("input", (e) => {
     addDisplayNone();
   }
 });
-
 input.addEventListener("keypress", (e) => {
   let char = String.fromCharCode(e.keyCode);
   const validation = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -56,14 +55,12 @@ input.addEventListener("keypress", (e) => {
     e.preventDefault();
   }
 });
-
 document.addEventListener("click", (e) => {
   const verific = e.target.getAttribute("class");
   if (verific === "inputNumber") {
     return span.classList.replace("span-inputNumber", "spanlater");
   }
 });
-
 input.addEventListener("focus", (e) => {
   let valor2 = e.target.value;
   if (valor2 !== "") {
@@ -74,7 +71,6 @@ input.addEventListener("focus", (e) => {
   butao2.style.display = "none";
   span.classList.replace("spanlater", "span-inputNumber");
 });
-
 input.addEventListener("focusout", (e) => {
   let valor = e.target.value;
   if (valor === "") {
@@ -90,19 +86,18 @@ const cleanMarcker = () => {
     options.children[i].classList.replace("preenchido", "preencher");
   }
 };
-function errorInputNamber(){
+function errorInputNamber() {
+  butao2.style.display = "none";
+  alignExit.style.display = "none";
+  removeDisabled();
+  cleanMarcker();
+  addDisplayNone();
   span.classList.replace("span-inputNumber", "spanlater");
-      input.classList.add("inputNumber-erro");
-      butao2.style.display = "none";
-      alignExit.style.display = "none";
-      removeDisabled();
-      cleanMarcker();
-      addDisplayNone();
-      setTimeout(() => {
-        popuprapper.style.display = "initial";
-      }, 800);
+  input.classList.add("inputNumber-erro");
+  setTimeout(() => {
+    popuprapper.style.display = "initial";
+  }, 800);
 }
-
 function clickInputRepresentation() {
   cleanMarcker();
   const numberRepresentation = input.value.replace(/-/g, "");
@@ -113,13 +108,12 @@ function clickInputRepresentation() {
   let number4 = arrayRepresetation[6] + arrayRepresetation[7];
   let number5 = arrayRepresetation[8] + arrayRepresetation[9];
   let number6 = arrayRepresetation[10] + arrayRepresetation[11];
-  const result = [number1, number2, number3, number4, number5, number6].sort(
-    (a, b) => a - b
-  );
+  const result = [number1, number2, number3, number4, number5, number6];
+  result.sort((a, b) => a - b);
   result.map((num) => {
     valor = `${num}`;
     if (valor > "60") {
-      errorInputNamber()
+      errorInputNamber();
     } else {
       alignExit.style.display = "initial";
       removeDisplayNone();
@@ -136,6 +130,11 @@ function clickInputRepresentation() {
       setTimeout(() => {
         removeDisabled2();
       }, 1000);
+    }
+  });
+  result.sort((a, b) => {
+    if (a - b === 0) {
+      return errorInputNamber();
     }
   });
   const showNumberPar = result.filter((number) => {
