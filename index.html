@@ -9,162 +9,164 @@
     <title>PROJETO MEGA-SENA</title>
   </head>
   <body>
-    <input type="checkbox" name="keyboardRemove" id="keyboardRemove">
-    <header class="title fist">
-      <h1>ANALIZADOR DE POSSÍVEIS NÚMEROS SORTEADOS DA MEGA-SENA</h1>
-    </header>
-    <section class="wrapperInput">
-      <div class="aligninputmaker">
-        <span class="span-inputNumber">numeros sorteados</span>
-        <input
-          class="inputNumber"
-          type="text"
-          inputmode="numeric"
-          maxlength="17"
-          placeholder="00-00-00-00-00-00"
-          onchage="getInputValue()"
-        />
+    <div id="backgroundpage">
+      <!-- <input type="checkbox" name="keyboardRemove" id="keyboardRemove"> -->
+      <header class="title fist">
+        <h1>ANALIZADOR DE POSSÍVEIS NÚMEROS SORTEADOS DA MEGA-SENA</h1>
+      </header>
+      <section class="wrapperInput">
+        <div class="aligninputmaker">
+          <span class="span-inputNumber">numeros sorteados</span>
+          <input
+            class="inputNumber"
+            type="text"
+            inputmode="numeric"
+            maxlength="17"
+            placeholder="00-00-00-00-00-00"
+            onchage="getInputValue()"
+          />
+        </div>
+      </section>
+      <div class="alignButton1">
+        <button
+          class="button-sorteados"
+          disabled
+          onclick="clickInputRepresentation()"
+        >
+          GERAR SORTEADOS
+        </button>
       </div>
-    </section>
-    <div class="alignButton1">
-      <button
-        class="button-sorteados"
-        disabled
-        onclick="clickInputRepresentation()"
-      >
-        GERAR SORTEADOS
-      </button>
-    </div>
-    <div class="alignExit">
-      <h1 id="exitNumbers"></h1>
-    </div>
-    <h2 class="title">Representação gráfica da aposta</h2>
-    <section class="alignImg">
-      <img id="imagem" src="img/foto mega-sena1.png" alt="imagem do jogo" />
-    </section>
-    <div class="alignmaker">
-      <div class="makerbloc">
-        <span class="preencher" id="n01">*</span>
-        <span class="preencher" id="n02">*</span>
-        <span class="preencher" id="n03">*</span>
-        <span class="preencher" id="n04">*</span>
-        <span class="preencher" id="n05">*</span>
-        <span class="preencher" id="n06">*</span>
-        <span class="preencher" id="n07">*</span>
-        <span class="preencher" id="n08">*</span>
-        <span class="preencher" id="n09">*</span>
-        <span class="preencher" id="n10">*</span>
-        <span class="preencher" id="n11">*</span>
-        <span class="preencher" id="n12">*</span>
-        <span class="preencher" id="n13">*</span>
-        <span class="preencher" id="n14">*</span>
-        <span class="preencher" id="n15">*</span>
-        <span class="preencher" id="n16">*</span>
-        <span class="preencher" id="n17">*</span>
-        <span class="preencher" id="n18">*</span>
-        <span class="preencher" id="n19">*</span>
-        <span class="preencher" id="n20">*</span>
-        <span class="preencher" id="n21">*</span>
-        <span class="preencher" id="n22">*</span>
-        <span class="preencher" id="n23">*</span>
-        <span class="preencher" id="n24">*</span>
-        <span class="preencher" id="n25">*</span>
-        <span class="preencher" id="n26">*</span>
-        <span class="preencher" id="n27">*</span>
-        <span class="preencher" id="n28">*</span>
-        <span class="preencher" id="n29">*</span>
-        <span class="preencher" id="n30">*</span>
-        <span class="preencher" id="n31">*</span>
-        <span class="preencher" id="n32">*</span>
-        <span class="preencher" id="n33">*</span>
-        <span class="preencher" id="n34">*</span>
-        <span class="preencher" id="n35">*</span>
-        <span class="preencher" id="n36">*</span>
-        <span class="preencher" id="n37">*</span>
-        <span class="preencher" id="n38">*</span>
-        <span class="preencher" id="n39">*</span>
-        <span class="preencher" id="n40">*</span>
-        <span class="preencher" id="n41">*</span>
-        <span class="preencher" id="n42">*</span>
-        <span class="preencher" id="n43">*</span>
-        <span class="preencher" id="n44">*</span>
-        <span class="preencher" id="n45">*</span>
-        <span class="preencher" id="n46">*</span>
-        <span class="preencher" id="n47">*</span>
-        <span class="preencher" id="n48">*</span>
-        <span class="preencher" id="n49">*</span>
-        <span class="preencher" id="n50">*</span>
-        <span class="preencher" id="n51">*</span>
-        <span class="preencher" id="n52">*</span>
-        <span class="preencher" id="n53">*</span>
-        <span class="preencher" id="n54">*</span>
-        <span class="preencher" id="n55">*</span>
-        <span class="preencher" id="n56">*</span>
-        <span class="preencher" id="n57">*</span>
-        <span class="preencher" id="n58">*</span>
-        <span class="preencher" id="n59">*</span>
-        <span class="preencher" id="n60">*</span>
+      <div class="alignExit">
+        <h1 id="exitNumbers"></h1>
       </div>
-    </div>
-    
-    <div class="alignLegend">
-      <div class="legend">
-        <h3 class="title alignsubtitle">
-          Qtd de número par:
-          <h2 class="title" id="qtdpar"></h2>
-        </h3>
-        <h3 class="title alignsubtitle">
-          Valores pares:
-          <h2 class="title" id="value-par"></h2>
-        </h3>
-        <h3 class="title alignsubtitle">
-          Qtd de número ímpar:
-          <h2 class="title" id="qtdimpares"></h2>
-        </h3>
-        <h3 class="title alignsubtitle">
-          Valores ímpares:
-          <h2 class="title" id="value-impares"></h2>
-        </h3>
-      </div>
-    </div>
-    <di class="popuprapper">
-      <div class="popup">
-        <div class="popup-close">x</div>
-        <div class="popup-content">
-          <h2 class="popup-title">INFORMATIVO</h2>
-          <p class="popup-paragraf">
-            Por gentileza, digite apenas números de 01 à 60 e sem repetição.
-            Obrigado pela compreensão!
-          </p>
+      <h2 class="title">Representação gráfica da aposta</h2>
+      <section class="alignImg">
+        <img id="imagem" src="img/foto mega-sena1.png" alt="imagem do jogo" />
+      </section>
+      <div class="alignmaker">
+        <div class="makerbloc">
+          <span class="preencher" id="n01">*</span>
+          <span class="preencher" id="n02">*</span>
+          <span class="preencher" id="n03">*</span>
+          <span class="preencher" id="n04">*</span>
+          <span class="preencher" id="n05">*</span>
+          <span class="preencher" id="n06">*</span>
+          <span class="preencher" id="n07">*</span>
+          <span class="preencher" id="n08">*</span>
+          <span class="preencher" id="n09">*</span>
+          <span class="preencher" id="n10">*</span>
+          <span class="preencher" id="n11">*</span>
+          <span class="preencher" id="n12">*</span>
+          <span class="preencher" id="n13">*</span>
+          <span class="preencher" id="n14">*</span>
+          <span class="preencher" id="n15">*</span>
+          <span class="preencher" id="n16">*</span>
+          <span class="preencher" id="n17">*</span>
+          <span class="preencher" id="n18">*</span>
+          <span class="preencher" id="n19">*</span>
+          <span class="preencher" id="n20">*</span>
+          <span class="preencher" id="n21">*</span>
+          <span class="preencher" id="n22">*</span>
+          <span class="preencher" id="n23">*</span>
+          <span class="preencher" id="n24">*</span>
+          <span class="preencher" id="n25">*</span>
+          <span class="preencher" id="n26">*</span>
+          <span class="preencher" id="n27">*</span>
+          <span class="preencher" id="n28">*</span>
+          <span class="preencher" id="n29">*</span>
+          <span class="preencher" id="n30">*</span>
+          <span class="preencher" id="n31">*</span>
+          <span class="preencher" id="n32">*</span>
+          <span class="preencher" id="n33">*</span>
+          <span class="preencher" id="n34">*</span>
+          <span class="preencher" id="n35">*</span>
+          <span class="preencher" id="n36">*</span>
+          <span class="preencher" id="n37">*</span>
+          <span class="preencher" id="n38">*</span>
+          <span class="preencher" id="n39">*</span>
+          <span class="preencher" id="n40">*</span>
+          <span class="preencher" id="n41">*</span>
+          <span class="preencher" id="n42">*</span>
+          <span class="preencher" id="n43">*</span>
+          <span class="preencher" id="n44">*</span>
+          <span class="preencher" id="n45">*</span>
+          <span class="preencher" id="n46">*</span>
+          <span class="preencher" id="n47">*</span>
+          <span class="preencher" id="n48">*</span>
+          <span class="preencher" id="n49">*</span>
+          <span class="preencher" id="n50">*</span>
+          <span class="preencher" id="n51">*</span>
+          <span class="preencher" id="n52">*</span>
+          <span class="preencher" id="n53">*</span>
+          <span class="preencher" id="n54">*</span>
+          <span class="preencher" id="n55">*</span>
+          <span class="preencher" id="n56">*</span>
+          <span class="preencher" id="n57">*</span>
+          <span class="preencher" id="n58">*</span>
+          <span class="preencher" id="n59">*</span>
+          <span class="preencher" id="n60">*</span>
         </div>
       </div>
-    </di>
-    <div class="alignButton2">
-      <button class="button-bolao" disabled onclick="clickInputBolao()">
-        GERAR BOLÃO
-      </button>
-    </div>
-    <div class="alignBolao">
-      <h2 class="bolaoH2">
-        Aposta 1:
-      </h2>
-      <h1 class="bolaoH1">05-18-27-36-42-58</h1>
-      <h2 class="bolaoH2">
-        Aposta 2:
-      </h2>
-      <h1 class="bolaoH1">05-18-27-36-42-58</h1>
-      <h2 class="bolaoH2">
-        Aposta 3:
-      </h2>
-      <h1 class="bolaoH1">05-18-27-36-42-58</h1>
-      <h2 class="bolaoH2">
-        Aposta 4:
-      </h2>
-      <h1 class="bolaoH1">05-18-27-36-42-58</h1>
-      <h2 class="bolaoH2">
-        Aposta 5:
-      </h2>
-      <h1 class="bolaoH1">05-18-27-36-42-58</h1>
+      
+      <div class="alignLegend">
+        <div class="legend">
+          <h3 class="title alignsubtitle">
+            Qtd de número par:
+            <h2 class="title" id="qtdpar"></h2>
+          </h3>
+          <h3 class="title alignsubtitle">
+            Valores pares:
+            <h2 class="title" id="value-par"></h2>
+          </h3>
+          <h3 class="title alignsubtitle">
+            Qtd de número ímpar:
+            <h2 class="title" id="qtdimpares"></h2>
+          </h3>
+          <h3 class="title alignsubtitle">
+            Valores ímpares:
+            <h2 class="title" id="value-impares"></h2>
+          </h3>
+        </div>
+      </div>
+      <di class="popuprapper">
+        <div class="popup">
+          <div class="popup-close">x</div>
+          <div class="popup-content">
+            <h2 class="popup-title">INFORMATIVO</h2>
+            <p class="popup-paragraf">
+              Por gentileza, digite apenas números de 01 à 60 e sem repetição.
+              Obrigado pela compreensão!
+            </p>
+          </div>
+        </div>
+      </di>
+      <div class="alignButton2">
+        <button class="button-bolao" disabled onclick="clickInputBolao()">
+          GERAR BOLÃO
+        </button>
+      </div>
+      <div class="alignBolao">
+        <h2 class="bolaoH2">
+          Aposta 1:
+        </h2>
+        <h1 class="bolaoH1">05-18-27-36-42-58</h1>
+        <h2 class="bolaoH2">
+          Aposta 2:
+        </h2>
+        <h1 class="bolaoH1">05-18-27-36-42-58</h1>
+        <h2 class="bolaoH2">
+          Aposta 3:
+        </h2>
+        <h1 class="bolaoH1">05-18-27-36-42-58</h1>
+        <h2 class="bolaoH2">
+          Aposta 4:
+        </h2>
+        <h1 class="bolaoH1">05-18-27-36-42-58</h1>
+        <h2 class="bolaoH2">
+          Aposta 5:
+        </h2>
+        <h1 class="bolaoH1">05-18-27-36-42-58</h1>
+      </div>
     </div>
   </body>
 </html>

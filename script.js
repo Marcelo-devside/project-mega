@@ -42,7 +42,8 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    keyboardRemove.setAttribute("checked", "checked")
+    body.focus()
+    // keyboardRemove.setAttribute("checked", "checked")
   } else {
     addDisabled();
     addDisabled2();
