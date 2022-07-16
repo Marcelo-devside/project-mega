@@ -13,7 +13,7 @@ const valuePar = document.querySelector("#value-par");
 const qtdImpares = document.querySelector("#qtdimpares");
 const valueImpares = document.querySelector("#value-impares");
 const legend = document.querySelector(".legend");
-const keyboardRemove = document.querySelector("#keyboardRemove");
+const titulo = document.querySelector(".title");
 
 const removeDisabled = () => butao.removeAttribute("disabled");
 const addDisplayNone = () => (legend.style.display = "none");
@@ -42,13 +42,13 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    span.focus()
-    keyboardRemove.setAttribute("checked", "checked")
+    titulo.focus()
+    // titulo.setAttribute("checked", "checked")
   } else {
     addDisabled();
     addDisabled2();
     addDisplayNone();
-    keyboardRemove.removeAttribute("checked")
+    // keyboardRemove.removeAttribute("checked")
   }
 });
 input.addEventListener("keypress", (e) => {
