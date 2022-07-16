@@ -20,14 +20,13 @@ const removeDisplayNone = () => (legend.style.display = "block");
 const addDisabled = () => butao.setAttribute("disabled", "disabled");
 const removeDisabled2 = () => butao2.removeAttribute("disabled");
 const addDisabled2 = () => butao2.setAttribute("disabled", "disabled");
-
 closePopup.addEventListener("click", () => {
   popuprapper.style.display = "none";
   body.style.overflow = "visible";
 });
 window.addEventListener("load", () => {
   alignExit.style.display = "none";
-  butao2.style.display = "none";
+  // butao2.style.display = "none";
   popuprapper.style.display = "none";
 });
 input.addEventListener("input", (e) => {
@@ -42,11 +41,13 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    butao2.focus();
+    butao2.focus()
+    // titulo.setAttribute("checked", "checked")
   } else {
     addDisabled();
-    addDisabled2();
+    // addDisabled2();
     addDisplayNone();
+    // keyboardRemove.removeAttribute("checked")
   }
 });
 input.addEventListener("keypress", (e) => {
@@ -68,18 +69,18 @@ document.addEventListener("click", (e) => {
 input.addEventListener("focus", (e) => {
   let valor2 = e.target.value;
   if (valor2 !== "") {
-    butao2.style.display = "none";
+    // butao2.style.display = "none";
     addDisplayNone();
     return span.classList.replace("span-inputNumber", "spanlater");
   }
-  butao2.style.display = "none";
+  // butao2.style.display = "none";
   span.classList.replace("spanlater", "span-inputNumber");
 });
 input.addEventListener("focusout", (e) => {
   let valor = e.target.value;
   if (valor === "") {
     addDisabled();
-    addDisabled2();
+    // addDisabled2();
     return span.classList.replace("spanlater", "span-inputNumber");
   }
   input.classList.remove("inputNumber-erro");
@@ -128,7 +129,7 @@ function clickInputRepresentation() {
       showNumber.innerText = result3;
       let final = valor - 1;
       options.children[`${final}`].classList.replace("preencher", "preenchido");
-      butao2.style.display = "initial";
+      // butao2.style.display = "initial";
       alignExit.style.display = "initial";
       span.classList.replace("spanlater", "span-inputNumber");
       addDisabled();
