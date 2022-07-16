@@ -42,12 +42,13 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    butao.focus()
-    // keyboardRemove.setAttribute("checked", "checked")
+    span.focus()
+    keyboardRemove.setAttribute("checked", "checked")
   } else {
     addDisabled();
     addDisabled2();
     addDisplayNone();
+    keyboardRemove.removeAttribute("checked")
   }
 });
 input.addEventListener("keypress", (e) => {
