@@ -1,4 +1,4 @@
-const body = document.querySelector("body")
+const body = document.querySelector("body");
 const span = document.querySelector(".span-inputNumber");
 const input = document.querySelector(".inputNumber");
 const alignExit = document.querySelector(".alignExit");
@@ -22,7 +22,7 @@ const removeDisabled2 = () => butao2.removeAttribute("disabled");
 const addDisabled2 = () => butao2.setAttribute("disabled", "disabled");
 closePopup.addEventListener("click", () => {
   popuprapper.style.display = "none";
-  body.style.overflow="visible"
+  body.style.overflow = "visible";
 });
 window.addEventListener("load", () => {
   alignExit.style.display = "none";
@@ -41,6 +41,7 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
+    butao.focus();
   } else {
     addDisabled();
     addDisabled2();
@@ -91,7 +92,7 @@ const cleanMarcker = () => {
 function errorInputNamber() {
   butao2.style.display = "none";
   alignExit.style.display = "none";
-  body.style.overflow="hidden"
+  body.style.overflow = "hidden";
   removeDisabled();
   cleanMarcker();
   addDisplayNone();
