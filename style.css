@@ -139,7 +139,7 @@ h2.title {
   color: var(--textcolorinput);
   font-size: 24.5px;
   border-radius: 5px;
-  width: 350px;
+  width: 320px;
   color: #083827;
   height: 60px;
   top: 20px;
@@ -299,7 +299,7 @@ h2.title {
 
 .button-sorteados,
 .button-bolao {
-  width: 350px;
+  width: 320px;
   height: 65px;
   font-size: 0.9em;
   border-radius: 10px;
