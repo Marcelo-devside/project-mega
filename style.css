@@ -12,7 +12,8 @@
   --textcolorinput: rgb(65, 62, 62);
 }
 
-body, html {
+body,
+html {
   background-color: #2A996E;
   /* background-image:  url('https://especiais.gazetadopovo.com.br/loterias/wp-content/themes/loterias/img/opengraph-mega-sena.jpg');
   background-repeat: no-repeat;
@@ -20,13 +21,7 @@ body, html {
   padding-bottom: 282px;
   overflow-y: hidden; */
 }
-/* #backgroundpage{
-  background-color: #2A996E;
-  z-index: 1;
-}
-#keyboardRemove{
-  z-index: 0;
-} */
+
 .title {
   color: #18382c;
   font-size: clamp(0.5em, 1.2vw + 0.1rem, 1rem);
@@ -36,6 +31,7 @@ body, html {
   margin-right: 20px;
   margin-left: 20px;
 }
+
 #qtdpar,
 #qtdimpares {
   font-size: clamp(2.8rem, 2vw + 0.6rem, 3rem);
@@ -46,10 +42,12 @@ body, html {
   letter-spacing: 3px;
   font-size: clamp(1.4rem, 1vw + 0.6rem, 1.3rem);
 }
-.alignLegend{
+
+.alignLegend {
   display: flex;
   justify-content: center;
 }
+
 .legend {
   display: none;
   background-color: #167e57;
@@ -62,7 +60,8 @@ body, html {
 h1 {
   line-height: 25px;
 }
-.alignsubtitle{
+
+.alignsubtitle {
   font-size: clamp(1.2rem, 1vw + 0.6rem, 1.3rem);
 }
 
@@ -438,19 +437,22 @@ h2.title {
     color: black;
   }
 }
-.alignBolao{
+
+.alignBolao {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.bolaoH2{
+
+.bolaoH2 {
   margin: 30px 160px auto 0px;
   font-size: clamp(0.6em, 1vw + 1rem, 1.6rem);
   color: #063423;
 }
-.bolaoH1{
+
+.bolaoH1 {
   margin: 10px auto 10px auto;
   padding: 15px 15px;
   font-size: clamp(1.8em, 1.2vw + 1rem, 3.6rem);

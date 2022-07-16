@@ -13,7 +13,6 @@ const valuePar = document.querySelector("#value-par");
 const qtdImpares = document.querySelector("#qtdimpares");
 const valueImpares = document.querySelector("#value-impares");
 const legend = document.querySelector(".legend");
-const titulo = document.querySelector(".title");
 
 const removeDisabled = () => butao.removeAttribute("disabled");
 const addDisplayNone = () => (legend.style.display = "none");
@@ -21,6 +20,7 @@ const removeDisplayNone = () => (legend.style.display = "block");
 const addDisabled = () => butao.setAttribute("disabled", "disabled");
 const removeDisabled2 = () => butao2.removeAttribute("disabled");
 const addDisabled2 = () => butao2.setAttribute("disabled", "disabled");
+
 closePopup.addEventListener("click", () => {
   popuprapper.style.display = "none";
   body.style.overflow = "visible";
@@ -42,13 +42,11 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    titulo.focus()
-    // titulo.setAttribute("checked", "checked")
+    butao2.focus();
   } else {
     addDisabled();
     addDisabled2();
     addDisplayNone();
-    // keyboardRemove.removeAttribute("checked")
   }
 });
 input.addEventListener("keypress", (e) => {
