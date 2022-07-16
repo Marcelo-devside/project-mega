@@ -42,8 +42,8 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    body.focus()
-    keyboardRemove.setAttribute("checked", "checked")
+    butao.focus()
+    // keyboardRemove.setAttribute("checked", "checked")
   } else {
     addDisabled();
     addDisabled2();
