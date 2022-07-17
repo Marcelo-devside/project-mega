@@ -42,11 +42,14 @@ input.addEventListener("input", (e) => {
   if (value.length == 17) {
     removeDisabled();
     butao2.focus()
+    // showNumber.style.display = "block"
     // titulo.setAttribute("checked", "checked")
   } else {
     addDisabled();
     // addDisabled2();
     addDisplayNone();
+    cleanMarcker();
+    showNumber.style.display = "none"
     // keyboardRemove.removeAttribute("checked")
   }
 });
@@ -74,6 +77,7 @@ input.addEventListener("focus", (e) => {
     return span.classList.replace("span-inputNumber", "spanlater");
   }
   // butao2.style.display = "none";
+  showNumber.style.display = "none"
   span.classList.replace("spanlater", "span-inputNumber");
 });
 input.addEventListener("focusout", (e) => {
@@ -92,7 +96,7 @@ const cleanMarcker = () => {
   }
 };
 function errorInputNamber() {
-  butao2.style.display = "none";
+  // butao2.style.display = "none";
   alignExit.style.display = "none";
   body.style.overflow = "hidden";
   removeDisabled();
@@ -105,6 +109,7 @@ function errorInputNamber() {
   }, 800);
 }
 function clickInputRepresentation() {
+  showNumber.style.display = "block"
   cleanMarcker();
   const numberRepresentation = input.value.replace(/-/g, "");
   let arrayRepresetation = [...numberRepresentation];

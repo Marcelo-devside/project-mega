@@ -373,16 +373,19 @@ h2.title {
   padding: 10px;
   background-color: rgb(255, 255, 255);
   position: relative;
-  animation: fadinUpPopup 0.2s;
+  animation: fadinUpPopup 1s;
 
 }
 
 @keyframes fadinUpPopup {
-  from {
+  0% {
+    margin-top: 250px;
     background-color: rgba(0, 0, 0, 0);
-  }
-
-  to {
+  } 50% {
+    margin-top: 180px;
+    background-color: rgba(255, 255, 255, 0.219);
+  } 100% {
+    margin-top: 140px;
     background-color: rgb(255, 255, 255);
 
   }
