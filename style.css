@@ -15,11 +15,6 @@
 body,
 html {
   background-color: #2A996E;
-  /* background-image:  url('https://especiais.gazetadopovo.com.br/loterias/wp-content/themes/loterias/img/opengraph-mega-sena.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 282px;
-  overflow-y: hidden; */
 }
 
 .title {
@@ -381,10 +376,21 @@ h2.title {
   0% {
     margin-top: 250px;
     background-color: rgba(0, 0, 0, 0);
-  } 50% {
-    margin-top: 180px;
-    background-color: rgba(255, 255, 255, 0.219);
-  } 100% {
+  }
+
+  25% {
+    background-color: rgba(255, 255, 255, 0.10);
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  75% {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  100% {
     margin-top: 140px;
     background-color: rgb(255, 255, 255);
 

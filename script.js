@@ -26,7 +26,6 @@ closePopup.addEventListener("click", () => {
 });
 window.addEventListener("load", () => {
   alignExit.style.display = "none";
-  // butao2.style.display = "none";
   popuprapper.style.display = "none";
 });
 input.addEventListener("input", (e) => {
@@ -41,16 +40,12 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    butao2.focus()
-    // showNumber.style.display = "block"
-    // titulo.setAttribute("checked", "checked")
+    butao2.focus();
   } else {
     addDisabled();
-    // addDisabled2();
     addDisplayNone();
     cleanMarcker();
-    showNumber.style.display = "none"
-    // keyboardRemove.removeAttribute("checked")
+    showNumber.style.display = "none";
   }
 });
 input.addEventListener("keypress", (e) => {
@@ -72,19 +67,16 @@ document.addEventListener("click", (e) => {
 input.addEventListener("focus", (e) => {
   let valor2 = e.target.value;
   if (valor2 !== "") {
-    // butao2.style.display = "none";
     addDisplayNone();
     return span.classList.replace("span-inputNumber", "spanlater");
   }
-  // butao2.style.display = "none";
-  showNumber.style.display = "none"
+  showNumber.style.display = "none";
   span.classList.replace("spanlater", "span-inputNumber");
 });
 input.addEventListener("focusout", (e) => {
   let valor = e.target.value;
   if (valor === "") {
     addDisabled();
-    // addDisabled2();
     return span.classList.replace("spanlater", "span-inputNumber");
   }
   input.classList.remove("inputNumber-erro");
@@ -96,7 +88,6 @@ const cleanMarcker = () => {
   }
 };
 function errorInputNamber() {
-  // butao2.style.display = "none";
   alignExit.style.display = "none";
   body.style.overflow = "hidden";
   removeDisabled();
@@ -109,7 +100,7 @@ function errorInputNamber() {
   }, 800);
 }
 function clickInputRepresentation() {
-  showNumber.style.display = "block"
+  showNumber.style.display = "block";
   cleanMarcker();
   const numberRepresentation = input.value.replace(/-/g, "");
   let arrayRepresetation = [...numberRepresentation];
@@ -134,7 +125,6 @@ function clickInputRepresentation() {
       showNumber.innerText = result3;
       let final = valor - 1;
       options.children[`${final}`].classList.replace("preencher", "preenchido");
-      // butao2.style.display = "initial";
       alignExit.style.display = "initial";
       span.classList.replace("spanlater", "span-inputNumber");
       addDisabled();
