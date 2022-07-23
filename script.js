@@ -196,44 +196,44 @@ function clickInputBolao() {
     let newArray2 = transformBolaoValue.replace(/,/g, "-")
     fillZeroBolao1.innerText = newArray2
   }
-  // function makerNumberBolão2(){
-  //   const newArray = Array(6)
-  //   .fill(0)
-  //   .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
-  //   .sort((a, b)=> a - b)
-  //   let transformBolaoValue = newArray.toString()
-  //   let newArray2 = transformBolaoValue.replace(/,/g, "-")
-  //   fillZeroBolao2.innerText = newArray2
-  // }
-  // function makerNumberBolão3(){
-  //   const newArray = Array(6)
-  //   .fill(0)
-  //   .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
-  //   .sort((a, b)=> a - b)
-  //   let transformBolaoValue = newArray.toString()
-  //   let newArray2 = transformBolaoValue.replace(/,/g, "-")
-  //   fillZeroBolao3.innerText = newArray2
-  // }
-  // function makerNumberBolão4(){
-  //   const newArray = Array(6)
-  //   .fill(0)
-  //   .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
-  //   .sort((a, b)=> a - b)
-  //   let transformBolaoValue = newArray.toString()
-  //   let newArray2 = transformBolaoValue.replace(/,/g, "-")
-  //   fillZeroBolao4.innerText = newArray2
-  // }
-  // function makerNumberBolão5(){
-  //   const newArray = Array(6)
-  //   .fill(0)
-  //   .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
-  //   .sort((a, b)=> a - b)
-  //   let transformBolaoValue = newArray.toString()
-  //   let newArray2 = transformBolaoValue.replace(/,/g, "-")
-  //   fillZeroBolao5.innerText = newArray2
-  // }
-  // let arrayFinaly =  [makerNumberBolão1(), makerNumberBolão2(), makerNumberBolão3(), makerNumberBolão4(), makerNumberBolão5()]
-  // return arrayFinaly
+  function makerNumberBolão2(){
+    const newArray = Array(6)
+    .fill(0)
+    .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
+    .sort((a, b)=> a - b)
+    let transformBolaoValue = newArray.toString()
+    let newArray2 = transformBolaoValue.replace(/,/g, "-")
+    fillZeroBolao2.innerText = newArray2
+  }
+  function makerNumberBolão3(){
+    const newArray = Array(6)
+    .fill(0)
+    .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
+    .sort((a, b)=> a - b)
+    let transformBolaoValue = newArray.toString()
+    let newArray2 = transformBolaoValue.replace(/,/g, "-")
+    fillZeroBolao3.innerText = newArray2
+  }
+  function makerNumberBolão4(){
+    const newArray = Array(6)
+    .fill(0)
+    .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
+    .sort((a, b)=> a - b)
+    let transformBolaoValue = newArray.toString()
+    let newArray2 = transformBolaoValue.replace(/,/g, "-")
+    fillZeroBolao4.innerText = newArray2
+  }
+  function makerNumberBolão5(){
+    const newArray = Array(6)
+    .fill(0)
+    .reduce(a =>[...a, makerNumberBolaonotContain(a)], [])
+    .sort((a, b)=> a - b)
+    let transformBolaoValue = newArray.toString()
+    let newArray2 = transformBolaoValue.replace(/,/g, "-")
+    fillZeroBolao5.innerText = newArray2
+  }
+  let arrayFinaly =  [makerNumberBolão1(), makerNumberBolão2(), makerNumberBolão3(), makerNumberBolão4(), makerNumberBolão5()]
+  return arrayFinaly
   return makerNumberBolão1()
 }
 function copyText(){
