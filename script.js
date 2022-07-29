@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const unfocusinput = document.querySelector("#unfocusinput");
 const span = document.querySelector(".span-inputNumber");
 const input = document.querySelector(".inputNumber");
 const alignExit = document.querySelector(".alignExit");
@@ -20,6 +21,8 @@ const fillZeroBolao3 = document.querySelector("#ap3");
 const fillZeroBolao4 = document.querySelector("#ap4");
 const fillZeroBolao5 = document.querySelector("#ap5");
 
+const focuscheckbox = ()=> unfocusinput.setAttribute('checked', 'checked')
+const unfocuscheckbox = ()=> unfocusinput.removeAttribute('checked')
 const removeDisabled = () => butao.removeAttribute("disabled");
 const addDisplayNone = () => (legend.style.display = "none");
 const removeDisplayNone = () => (legend.style.display = "block");
@@ -47,11 +50,13 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    butao2.focus();
+    focuscheckbox()
+    
   } else {
     addDisabled();
     addDisplayNone();
     cleanMarcker();
+    unfocuscheckbox()
     showNumber.style.display = "none";
   }
 });

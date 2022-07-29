@@ -471,3 +471,7 @@ h2.title {
   background-color: #167e57;
 
 }
+#unfocusinput{
+position: absolute;
+z-index: -1;
+}
