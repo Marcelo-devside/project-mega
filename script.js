@@ -21,14 +21,16 @@ const fillZeroBolao3 = document.querySelector("#ap3");
 const fillZeroBolao4 = document.querySelector("#ap4");
 const fillZeroBolao5 = document.querySelector("#ap5");
 
-const focuscheckbox = ()=> unfocusinput.setAttribute('checked', 'checked')
-const unfocuscheckbox = ()=> unfocusinput.removeAttribute('checked')
 const removeDisabled = () => butao.removeAttribute("disabled");
 const addDisplayNone = () => (legend.style.display = "none");
 const removeDisplayNone = () => (legend.style.display = "block");
 const addDisabled = () => butao.setAttribute("disabled", "disabled");
 const removeDisabled2 = () => butao2.removeAttribute("disabled");
 const addDisabled2 = () => butao2.setAttribute("disabled", "disabled");
+
+const focuscheckbox = ()=> {
+  unfocusinput.focus()
+}
 closePopup.addEventListener("click", () => {
   popuprapper.style.display = "none";
   body.style.overflow = "visible";
@@ -56,7 +58,6 @@ input.addEventListener("input", (e) => {
     addDisabled();
     addDisplayNone();
     cleanMarcker();
-    unfocuscheckbox()
     showNumber.style.display = "none";
   }
 });
