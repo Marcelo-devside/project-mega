@@ -127,7 +127,7 @@ function clickInputRepresentation() {
   result.map((num) => {
     valor = `${num}`;
     if (valor > "60") {
-      popupParagraf.innerText = `Por gentileza, digite apenas números de 01 à 60 ! Você digitou ${valor}.`;
+      popupParagraf.innerText = `Por gentileza, digite apenas números de 01 à 60! Você digitou ${valor}.`;
       errorInputNamber();
     } else {
       alignExit.style.display = "initial";
@@ -148,7 +148,7 @@ function clickInputRepresentation() {
   });
   result.sort((a, b) => {
     if (a - b === 0) {
-      popupParagraf.innerText = `Por gentileza, não digite números repetidos ! Você repetiu o número ${a}.`;
+      popupParagraf.innerText = `Por gentileza, não digite números repetidos! Você repetiu o número ${a}.`;
 
       return errorInputNamber();
     }
