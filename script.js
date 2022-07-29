@@ -90,6 +90,7 @@ input.addEventListener("focusout", (e) => {
   let valor = e.target.value;
   if (valor === "") {
     addDisabled();
+    input.classList.remove("inputNumber-erro");
     return span.classList.replace("spanlater", "span-inputNumber");
   }
   input.classList.remove("inputNumber-erro");
@@ -113,6 +114,7 @@ function errorInputNamber() {
   }, 800);
 }
 function clickInputRepresentation() {
+  span.classList.replace("span-inputNumber", "spanlater");
   showNumber.style.display = "block";
   cleanMarcker();
   const numberRepresentation = input.value.replace(/-/g, "");
@@ -140,7 +142,6 @@ function clickInputRepresentation() {
       let final = valor - 1;
       options.children[`${final}`].classList.replace("preencher", "preenchido");
       alignExit.style.display = "initial";
-      span.classList.replace("spanlater", "span-inputNumber");
       addDisabled();
       setTimeout(() => {
         removeDisabled2();
@@ -150,9 +151,8 @@ function clickInputRepresentation() {
   result.sort((a, b) => {
     if (a - b === 0) {
       popupParagraf.innerText = `Por gentileza, não digite números repetidos! Você repetiu o número ${a}.`;
-
       return errorInputNamber();
-    }
+    } 
   });
   const showNumberPar = result.filter((number) => {
     let divtwo = number % 2;
