@@ -163,8 +163,11 @@ h2.title {
 }
 
 .inputNumber-erro {
-  background-color: #11724e;
+  /* background-color:  #2A996E; */
   border: 1px solid red;
+  animation: errorNumber 0.2s;
+}
+.spanlater-erro{
   animation: errorNumber 0.2s;
 }
 
