@@ -2,6 +2,7 @@ const body = document.querySelector("body");
 const unfocusinput = document.querySelector("#unfocusinput");
 const span = document.querySelector(".span-inputNumber");
 const input = document.querySelector(".inputNumber");
+const changeGroundSpanLater = document.querySelector(".spanlater");
 const alignExit = document.querySelector(".alignExit");
 const showNumber = document.querySelector("#exitNumbers");
 const butao = document.querySelector(".button-sorteados");
