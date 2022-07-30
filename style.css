@@ -89,12 +89,10 @@ h2.title {
   font-size: 17px;
   transform: scale(0.9);
   transition: 70ms linear;
-  background-color: #2A996E;
-  /* background-color: red; */
   padding-top: 18px;
   padding-bottom: 24px;
   padding-left: 25px;
-  padding-right: 106px;
+  padding-right: 91px;
   color: #08422d;
   font-weight: 600;
   z-index: 50;
