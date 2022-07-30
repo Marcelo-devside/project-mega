@@ -163,7 +163,7 @@ h2.title {
 }
 
 .inputNumber-erro {
-  /* background-color:  #2A996E; */
+  background-color:  #2A996E;
   border: 1px solid red;
   animation: errorNumber 0.2s;
 }

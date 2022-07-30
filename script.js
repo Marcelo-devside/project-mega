@@ -73,6 +73,7 @@ input.addEventListener("keypress", (e) => {
 document.addEventListener("click", (e) => {
   const verific = e.target.getAttribute("class");
   if (verific === "inputNumber") {
+    input.focus()
     return span.classList.replace("span-inputNumber", "spanlater");
   }
 });
