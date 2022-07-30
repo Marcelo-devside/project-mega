@@ -84,15 +84,11 @@ h2.title {
 
 .span-inputNumber {
   position: absolute;
-  top: 19px;
-  left: -44px;
+  top: 38px;
+  left: -27px;
   font-size: 17px;
   transform: scale(0.9);
   transition: 70ms linear;
-  padding-top: 18px;
-  padding-bottom: 24px;
-  padding-left: 25px;
-  padding-right: 91px;
   color: #08422d;
   font-weight: 600;
   z-index: 50;
@@ -134,7 +130,7 @@ h2.title {
   font-size: clamp(0.200em, 0.2vw + 0.8rem, 0.9rem);
   font-weight: 600;
   transition: 90ms linear;
-  transform: scale(0.7);
+  transform: scale(0.8);
   z-index: 5;
 }
 
@@ -153,8 +149,7 @@ h2.title {
   color: #083827;
   height: 60px;
   top: 20px;
-  text-align: center;
-  text-indent: 10px;
+  text-indent: 40px;
   font-weight: 700;
   letter-spacing: 2px;
   position: absolute;
@@ -162,12 +157,10 @@ h2.title {
 }
 
 .inputNumber:focus {
-  background-color: #2A996E;
   border: 1px solid #0a4d34;
 }
 
 .inputNumber-erro {
-  background-color:  #2A996E;
   border: 1px solid red;
   animation: errorNumber 0.2s;
 }
