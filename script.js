@@ -28,9 +28,9 @@ const addDisabled = () => butao.setAttribute("disabled", "disabled");
 const removeDisabled2 = () => butao2.removeAttribute("disabled");
 const addDisabled2 = () => butao2.setAttribute("disabled", "disabled");
 
-const focuscheckbox = ()=> {
-  unfocusinput.focus()
-}
+const focuscheckbox = () => {
+  unfocusinput.focus();
+};
 closePopup.addEventListener("click", () => {
   popuprapper.style.display = "none";
   body.style.overflow = "visible";
@@ -52,8 +52,7 @@ input.addEventListener("input", (e) => {
   e.currentTarget.value = value;
   if (value.length == 17) {
     removeDisabled();
-    focuscheckbox()
-    
+    focuscheckbox();
   } else {
     addDisabled();
     addDisplayNone();
@@ -152,7 +151,7 @@ function clickInputRepresentation() {
     if (a - b === 0) {
       popupParagraf.innerText = `Por gentileza, não digite números repetidos! Você repetiu o número ${a}.`;
       return errorInputNamber();
-    } 
+    }
   });
   const showNumberPar = result.filter((number) => {
     let divtwo = number % 2;

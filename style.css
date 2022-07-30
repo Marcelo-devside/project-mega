@@ -84,12 +84,13 @@ h2.title {
 
 .span-inputNumber {
   position: absolute;
-  top: 20px;
-  left: -14px;
-  font-size: 12px;
-  transition: top 20ms linear, font-size 20ms ease-in;
+  top: 37px;
+  left: -15px;
+  font-size: 20px;
+  transition: font-size 30ms ease-out;
+  color: #08422d;
+  font-weight: 600;
   z-index: 50;
-  color: #094d34;
 }
 
 .alignExit {
@@ -119,13 +120,15 @@ h2.title {
 
 .spanlater {
   left: -23px;
-  top: 0px;
+  top: 12px;
   color: #08422d;
-  ;
+  background-color: #2A996E;
+  padding-left: 3px;
+  padding-right: 5px;
   position: absolute;
   font-size: clamp(0.200em, 0.2vw + 0.8rem, 0.9rem);
   font-weight: 600;
-  transition: top 20ms linear, font-size 20ms linear;
+  transition: top 30ms linear;
   z-index: 5;
 }
 
@@ -135,8 +138,8 @@ h2.title {
 
 .inputNumber {
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0);
-  background-color: #167e57;
+  border: 1px solid #0a4d34;
+  background-color: #2A996E;
   color: var(--textcolorinput);
   font-size: 24.5px;
   border-radius: 5px;
@@ -152,21 +155,8 @@ h2.title {
   z-index: 2;
 }
 
-.inputNumber::placeholder {
-  color: #106647;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-left: 10px;
-}
-
-.inputNumber:focus::placeholder {
-  color: rgba(255, 255, 255, 0);
-}
-
 .inputNumber:focus {
-  background-color: #11724e;
+  background-color: #2A996E;
   border: 1px solid #0a4d34;
 }
 
@@ -471,8 +461,9 @@ h2.title {
   background-color: #167e57;
 
 }
-#unfocusinput{
-position: absolute;
-z-index: 2;
-top: 40px;
+
+#unfocusinput {
+  position: absolute;
+  z-index: 2;
+  top: 40px;
 }
