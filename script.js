@@ -77,6 +77,7 @@ document.addEventListener("click", (e) => {
   }
 });
 span.addEventListener("click", () => {
+  input.focus()
   return span.classList.replace("span-inputNumber", "spanlater");
 })
 input.addEventListener("click", (e) => {
