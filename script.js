@@ -76,7 +76,10 @@ document.addEventListener("click", (e) => {
     return span.classList.replace("span-inputNumber", "spanlater");
   }
 });
-input.addEventListener("focus", (e) => {
+span.addEventListener("click", () => {
+  return span.classList.replace("span-inputNumber", "spanlater");
+})
+input.addEventListener("click", (e) => {
   let valor2 = e.target.value;
   if (valor2 !== "") {
     addDisplayNone();
