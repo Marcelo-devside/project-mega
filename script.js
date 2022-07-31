@@ -74,15 +74,16 @@ input.addEventListener("keypress", (e) => {
 document.addEventListener("click", (e) => {
   const verific = e.target.getAttribute("class");
   if (verific === "inputNumber") {
-    input.focus()
+    input.focus();
     return span.classList.replace("span-inputNumber", "spanlater");
   }
 });
 span.addEventListener("click", () => {
-  input.focus()
+  input.focus();
   return span.classList.replace("span-inputNumber", "spanlater");
-})
+});
 input.addEventListener("click", (e) => {
+  input.focus();
   let valor2 = e.target.value;
   if (valor2 !== "") {
     addDisplayNone();
