@@ -336,6 +336,7 @@ h2.title {
   z-index: 6;
   background-color: rgba(0, 0, 0, 0.658);
   animation: fadinUpRapper 0.8s;
+  z-index: 51;
 }
 
 @keyframes fadinUpRapper {
@@ -524,7 +525,7 @@ h2.title {
   }
 
   .makerbloc {
-    margin-top: -320px;
+    margin-top: -640px;
     margin-left: 1px;
     z-index: 250;
   }

@@ -39,6 +39,7 @@ closePopup.addEventListener("click", () => {
 window.addEventListener("load", () => {
   alignExit.style.display = "none";
   popuprapper.style.display = "none";
+  input.value = "";
   inicializarBolao();
 });
 input.addEventListener("input", (e) => {
@@ -203,6 +204,7 @@ function makerNumberBolaonotContain(array) {
     ? makerNumberBolaonotContain(array)
     : newNumber;
 }
+popuprapper.style.display = "none";
 
 function clickInputBolao() {
   function makerNumberBolão1() {
@@ -258,13 +260,19 @@ function clickInputBolao() {
     makerNumberBolão5(),
   ];
   return arrayFinaly;
-  return makerNumberBolão1();
 }
-function copyText() {
-  fillZeroBolao1,
-    addEventListener("click", () => {
-      input.value = fillZeroBolao1.textContent;
-      console.log(clicou);
-    });
-  console.log(copyText);
+// function print() {
+//   if (BrowserDetect.browser == "Firefox") {
+//     options.style.maginTop = "-640px"
+// margin-top: -320px;
+// }
+// }
+
+function teste() {
+  if (navigator.userAgent.indexOf("Chrome") === -1) {
+    console.log("É navegador FireFox");
+  } else if (navigator.userAgent.indexOf("Mozilla") === 0) {
+    console.log("É navegador Chrome");
+  }
 }
+teste();
