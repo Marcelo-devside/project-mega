@@ -488,15 +488,15 @@ h2.title {
 }
 [data-anime]{
   opacity: 0;
-  transition: .3s ease-in;
+  transition: .2s ease-in;
 }
 
 [data-anime= 'left']{
-  transform: translate3d(-150px, 0px, 0px);
+  transform: translate3d(-40px, 0px, 0px);
 }
 
 [data-anime= 'right']{
-  transform: translate3d(150px, 0px, 0px);
+  transform: translate3d(40px, 0px, 0px);
 }
 .animated{
   opacity: 1;

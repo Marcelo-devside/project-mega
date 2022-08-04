@@ -267,11 +267,11 @@ window.addEventListener('scroll', ()=> {
   let animation = 'animated'
 const alturaPage = window.pageYOffset + ((window.innerHeight * 3) / 4)
 const alturaPage2 = window.pageYOffset 
-  if (alturaPage2 >= 354 && alturaPage2 <= 1045){
+  if (alturaPage2 >= 340 && alturaPage2 <= 1240){
+    showNumber.classList.add("rollScrollyPlus")
     showNumber.classList.remove("rollScrollyPlusMax")
     showNumber.classList.remove("alturaPage")
-    showNumber.classList.add("rollScrollyPlus")
-  } else if(alturaPage2 < 354) {
+  } else if(alturaPage2 < 340) {
     showNumber.classList.remove("rollScrollyPlus")
     showNumber.classList.add("alturaPage")
   } else {
