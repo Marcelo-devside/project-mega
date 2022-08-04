@@ -15,6 +15,7 @@
 body,
 html {
   background-color: #2A996E;
+  /* height: 2750px; */
 }
 
 .title {
@@ -107,12 +108,25 @@ h2.title {
   line-height: 45px;
   animation: exitEffect 1s;
   color: #063423;
+  z-index: 250;
+}
+.rollScrollyPlus{
+  background-color: #24634d;
+  top: 0;
+  position: sticky;
+  transition: .1s linear;
+}
+.alturaPage{
+  background-color: rgba(255, 255, 255, 0);
+}
+.rollScrollyPlusMax{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 @keyframes exitEffect {
   from {
     font-size: clamp(0.005em, 0.2vw + 0.2rem, 0.1rem);
-
   }
 
   to {
@@ -463,12 +477,31 @@ h2.title {
   background-color: #167e57;
 
 }
-
+.alignBolao {
+  margin-bottom: 150px;
+}
 #unfocusinput {
   position: absolute;
   z-index: -1;
   top: 40px;
 
+}
+[data-anime]{
+  opacity: 0;
+  transition: .3s ease-in;
+}
+
+[data-anime= 'left']{
+  transform: translate3d(-150px, 0px, 0px);
+}
+
+[data-anime= 'right']{
+  transform: translate3d(150px, 0px, 0px);
+}
+.animated{
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  
 }
 
 @media print {

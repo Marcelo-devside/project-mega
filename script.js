@@ -21,6 +21,8 @@ const fillZeroBolao2 = document.querySelector("#ap2");
 const fillZeroBolao3 = document.querySelector("#ap3");
 const fillZeroBolao4 = document.querySelector("#ap4");
 const fillZeroBolao5 = document.querySelector("#ap5");
+const animateBolao = document.querySelectorAll('[data-anime]')
+// const animation = document.querySelector('.animated')
 
 const removeDisabled = () => butao.removeAttribute("disabled");
 const addDisplayNone = () => (legend.style.display = "none");
@@ -261,6 +263,29 @@ function clickInputBolao() {
   ];
   return arrayFinaly;
 }
+window.addEventListener('scroll', ()=> {
+  let animation = 'animated'
+const alturaPage = window.pageYOffset + ((window.innerHeight * 3) / 4)
+const alturaPage2 = window.pageYOffset 
+  if (alturaPage2 >= 354 && alturaPage2 <= 1045){
+    showNumber.classList.remove("rollScrollyPlusMax")
+    showNumber.classList.remove("alturaPage")
+    showNumber.classList.add("rollScrollyPlus")
+  } else if(alturaPage2 < 354) {
+    showNumber.classList.remove("rollScrollyPlus")
+    showNumber.classList.add("alturaPage")
+  } else {
+    showNumber.classList.remove("rollScrollyPlus")
+    showNumber.classList.add("rollScrollyPlusMax")
+  }
+  animateBolao.forEach((el)=>{
+    if(alturaPage > el.offsetTop){
+      el.classList.add(animation)
+    }
+  })
+} )
+
+
 // function print() {
 //   if (BrowserDetect.browser == "Firefox") {
 //     options.style.maginTop = "-640px"
