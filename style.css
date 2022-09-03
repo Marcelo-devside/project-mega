@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,8 +6,7 @@
 }
 
 :root {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Flex', sans-serif;
   --ckeched: #1f236bea;
   --bginput: #f0f0f0;
   --textcolorinput: rgb(65, 62, 62);
@@ -15,7 +15,7 @@
 body,
 html {
   background-color: #2A996E;
-  /* height: 2750px; */
+  overflow-x: none;
 }
 
 .title {
@@ -54,7 +54,8 @@ html {
 }
 
 h1 {
-  line-height: 25px;
+  line-height: 28px;
+  font-size: clamp(22px, 2.5vw, 6rem);
 }
 
 .alignsubtitle {
@@ -65,7 +66,7 @@ h2.title {
   color: #18382c;
   margin-top: 50px;
   margin-bottom: 30px;
-  font-size: clamp(0.9rem, 1vw + 0.6rem, 2rem);
+  font-size: clamp(16px, 1vw + 0.6rem, 2rem);
 }
 
 .wrapperInput {
@@ -108,19 +109,25 @@ h2.title {
   line-height: 45px;
   animation: exitEffect 1s;
   color: #063423;
+  padding-top: 15px;
   z-index: 250;
 }
-.rollScrollyPlus{
+
+.rollScrollyPlus {
   background-color: #24634d;
-  top: 0;
+  position: -webkit-sticky;
   position: sticky;
-  transition: .1s linear;
+  top: -1px;
+  transition: .1ms linear;
+
 }
-.alturaPage{
+
+.alturaPage {
   background-color: rgba(255, 255, 255, 0);
 }
-.rollScrollyPlusMax{
-  position: relative;
+
+.rollScrollyPlusMax {
+  position: static;
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -173,7 +180,6 @@ h2.title {
   position: absolute;
   z-index: 2;
 }
-
 .inputNumber:focus {
   border: 1px solid #0a4d34;
 }
@@ -477,31 +483,35 @@ h2.title {
   background-color: #167e57;
 
 }
+
 .alignBolao {
   margin-bottom: 150px;
 }
+
 #unfocusinput {
   position: absolute;
   z-index: -1;
   top: 40px;
 
 }
-[data-anime]{
+
+[data-anime] {
   opacity: 0;
   transition: .2s ease-in;
 }
 
-[data-anime= 'left']{
-  transform: translate3d(-40px, 0px, 0px);
+[data-anime='left'] {
+  transform: translate3d(-30px, 0px, 0px);
 }
 
-[data-anime= 'right']{
-  transform: translate3d(40px, 0px, 0px);
+[data-anime='right'] {
+  transform: translate3d(30px, 0px, 0px);
 }
-.animated{
+
+.animated {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
-  
+
 }
 
 @media print {
