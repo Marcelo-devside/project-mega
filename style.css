@@ -86,7 +86,7 @@ h2.title {
 
 .span-inputNumber {
   position: absolute;
-  top: 38px;
+  top: 36px;
   left: -27px;
   font-size: 17px;
   transform: scale(0.9);
@@ -117,7 +117,7 @@ h2.title {
   background-color: #24634d;
   position: -webkit-sticky;
   position: sticky;
-  top: -1px;
+  top: -0.5px;
   transition: .1ms linear;
 
 }
@@ -143,7 +143,7 @@ h2.title {
 
 .spanlater {
   left: -40px;
-  top: 11px;
+  top: 6px;
   color: #08422d;
   /* background-color: #2A996E; */
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #2a996e 50%);
