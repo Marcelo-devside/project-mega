@@ -268,11 +268,11 @@ window.addEventListener('scroll', ()=> {
   const alturaPage = window.pageYOffset + ((window.innerHeight * 3) / 4)
   const alturaPage2 = window.pageYOffset 
   console.log(alturaPage2)
-  if (alturaPage2 > 375 && alturaPage2 < 1240){
+  if (alturaPage2 > 376 && alturaPage2 < 1240){
     showNumber.classList.remove("rollScrollyPlusMax")
     showNumber.classList.remove("alturaPage")
     showNumber.classList.add("rollScrollyPlus")
-  } else if(alturaPage2 < 375) {
+  } else if(alturaPage2 < 376) {
     showNumber.classList.remove("rollScrollyPlus")
     showNumber.classList.add("alturaPage")
   } else {
